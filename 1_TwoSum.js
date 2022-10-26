@@ -1,3 +1,8 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 //解法1
 const twoSum = function (nums, target) {
     //結果的陣列
