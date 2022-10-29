@@ -17,6 +17,7 @@ const threeSumClosest = function (nums, target) {
     //排序
     nums.sort(compareNumbers);
 
+    //長度為<=3時  直接回傳
     if (nums.length <= 3) {
         result = nums.reduce((num, value, index) => {
             return num += value;
@@ -24,6 +25,7 @@ const threeSumClosest = function (nums, target) {
         return result;
     }
     //迴圈進行三數加總並比對
+    debugger
     for (let i = 0; i < nums.length; i++) {
 
         let j = i + 1;
@@ -40,7 +42,9 @@ const threeSumClosest = function (nums, target) {
             if (result === undefined) {
                 result = sum;
                 minRange = sumMinusTarget;
-                k--
+                //需比較 sum 在 target的左側還是右側 來決定k-- 還是j++
+                //不會有 sum === target的情況  已經在前面return掉了
+                sum > target ? k-- : j++;
                 continue;
             }
 
@@ -50,7 +54,7 @@ const threeSumClosest = function (nums, target) {
                 result = sum;
                 minRange = sumMinusTarget;
             }
-            k--;
+            sum > target ? k-- : j++;
         }
     }
     return result;
