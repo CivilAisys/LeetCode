@@ -16,11 +16,13 @@ const removeDuplicates = function(nums) {
     return nums.length;
 };
 
-//解法2 因為spile為遍歷 套在while內會使效能非常慢 所以只要直接紀錄不重複的數字有幾個
+//解法2 
 const removeDuplicates2 = function(nums) {
+    // result 至少為1 
     let result = 1, i = 0, j = 1;
-    debugger
     while(i < nums.length && j < nums.length) {
+        /*當相等的有複數個時 j是為了比對當前有多少個相同的值  在比對到的時候  將最後一個相同的值改變為新比對到的不同數值以此持續推進
+        且將result+1*/
         if(nums[j] === nums[i]) {
             j++;
         } else {
