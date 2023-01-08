@@ -13,7 +13,7 @@ const threeSumClosest = function (nums, target) {
     //沒有指定初始  代表為undefined result為3數加總結果
     let result;
     //代表離target最短的距離  須取絕對值
-    let minRange
+    let minRange;
     //排序
     nums.sort(compareNumbers);
 
@@ -25,7 +25,6 @@ const threeSumClosest = function (nums, target) {
         return result;
     }
     //迴圈進行三數加總並比對
-    debugger
     for (let i = 0; i < nums.length; i++) {
 
         let j = i + 1;
