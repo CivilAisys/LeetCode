@@ -24,21 +24,17 @@ const letterCombinations = function (digits) {
     //長度為1  直接回串對應陣列
     if (digits.length === 1) return digitMap[digits[0]];
 
-    //長度為1  直接回串對應陣列
-    if (digits.length === 1) return digitMap[digits[1]];
-
     //遞迴
     const firstDigit = digits.slice(0, 1);
     const otherDigits = digits.slice(1);
     const otherLetterCombinations = letterCombinations(otherDigits);
     const firstDigitletters = digitMap[firstDigit];
-    //要回傳的結果陣列
-    let resultArr = [];
+
     firstDigitletters.forEach(item1 => {
         otherLetterCombinations.forEach(item2 => {
-            resultArr.push(item1 + item2);
+            result.push(item1 + item2);
         })
     })
 
-    return resultArr;
+    return result;
 };
