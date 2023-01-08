@@ -14,7 +14,7 @@ const longestCommonPrefix = function (strs) {
         // !== 0 因為比對結果應該從開頭 比對到的值索引必須為0 表示為開頭  prefix的值越比對應該會越小
         while (strs[i].indexOf(prefix) !== 0) {
             prefix = prefix.substring(0, prefix.length - 1);
-            //prefix length==0代表沒有比對到  估回傳""
+            //prefix length==0代表沒有比對到  故回傳""
             if (prefix.length === 0) return "";
         }
     }
