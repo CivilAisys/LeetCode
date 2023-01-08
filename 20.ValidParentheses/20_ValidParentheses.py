@@ -9,7 +9,7 @@ def isValid(s: str) -> bool:
 
     #放置開放括號  當遇到閉合括號 pop出與其比對是否符合
     stack = []
-    #
+    #存放封閉括號對應的開放括號
     bracketDic = {
         ")": "(",
         "}": "{",
