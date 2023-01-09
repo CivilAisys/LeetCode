@@ -2,7 +2,7 @@
  * @param {number} n
  * @return {string[]}
  */ 
-//解法1 遞迴求解  此題好難理解  此題為演算法中的 Backtracking(回溯法)
+//解法1 遞迴求解  此題為演算法中的 Backtracking(回溯法)
 const generateParenthesis = function(n) {
     //要回傳的結果
     const result = [];
