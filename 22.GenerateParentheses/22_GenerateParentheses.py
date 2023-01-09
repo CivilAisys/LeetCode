@@ -15,7 +15,7 @@ def generateParenthesis(n: int) -> list[str]:
             generate(left+1, right, f"{string}(")
         if left > right and right < n:
             generate(left, right+1, f"{string})")
-        # 初始化
-        generate(0, 0, "")
+    # 初始化
+    generate(0, 0, "")
 
-    return None
+    return result
