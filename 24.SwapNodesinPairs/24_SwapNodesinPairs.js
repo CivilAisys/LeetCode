@@ -41,4 +41,4 @@ function ListNode(val, next) {
     this.next = (next === undefined ? null : next)
 }
 
-//swapPairs( new ListNode(1,new ListNode(2,new ListNode(3, new ListNode(4, undefined)))))
+swapPairs( new ListNode(1,new ListNode(2,new ListNode(3, new ListNode(4, undefined)))))
