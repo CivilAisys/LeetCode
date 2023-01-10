@@ -35,3 +35,5 @@ const removeDuplicates2 = function(nums) {
     
     return result;
 };
+
+removeDuplicates2([1,1,2])
