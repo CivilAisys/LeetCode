@@ -12,7 +12,7 @@ def combinationDFS(candidates: list[int], target: int, path: list[int], totalRes
     # 終止條件為 target == 0
     if target == 0:
         totalResult.append(path)
-
+    # 迴圈模擬選與不選  
     for index in range(len(candidates)):
         # 此條件非常重要  避免重複
         if index >= 1 and candidates[index] == candidates[index - 1]:
