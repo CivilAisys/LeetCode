@@ -1,4 +1,4 @@
-#解法1  同54邏輯
+# 解法1  同54邏輯
 def generateMatrix(n: int) -> list[list[int]]:
     # 使用List Comprehension產生相對應matrix 並其初始為0
     matrix = [[0 for _ in range(n)] for _ in range(n)]
@@ -35,12 +35,13 @@ def generateMatrix(n: int) -> list[list[int]]:
     return matrix
 
 
-#解法2 搞不太懂
+# 解法2 搞不太懂
 def generateMatrix1(n: int) -> list[list[int]]:
     A, lo = [[n*n]], n*n
     while lo > 1:
         lo, hi = lo - len(A), lo
         A = [list(range(lo, hi))] + list(zip(*reversed(A)))
     return A
+
 
 print(generateMatrix1(3))
