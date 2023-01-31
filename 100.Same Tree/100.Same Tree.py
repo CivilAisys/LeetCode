@@ -6,19 +6,11 @@ class TreeNode:
         self.right = right
 #解法1  遞歸求解兩樹各節點值是否相同
 def isSameTree(p: TreeNode, q: TreeNode) -> bool:
-
-
+    #終止條件  傳入兩個都為None 回傳True or 比對兩者是否一致
+    if not p and not q:
+        return True    
+    if (not p and q) or (not q and p) or (p.val != q.val):
+        return False
     
+    return isSameTree(p.left, q.left) and isSameTree(p.right, q.right)
 
-
-    return False
-
-#解法2 while loop 使用兩個quene輔助比對
-def isSameTree(p: TreeNode, q: TreeNode) -> bool:
-    quene_p = [p]
-    quene_q = [q]
-    while quene_p and quene_q:
-        if quene_p.pop() != 
-
-
-    return True
