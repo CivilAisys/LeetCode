@@ -45,7 +45,7 @@ def inorderTraversal1(root: TreeNode) -> list[int]:
     return result
 
 
-#解法3 同144題解法2  模板寫法
+#解法3 同144題解法2  模板寫法 往左下  直到沒有左子節點  過程中的都要加入
 def inorderTraversal2(root: TreeNode) -> list[int]:
     #結果集
     result = []
