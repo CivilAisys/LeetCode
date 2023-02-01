@@ -43,3 +43,24 @@ def inorderTraversal1(root: TreeNode) -> list[int]:
         pointer = pointer.right
 
     return result
+
+
+#解法3 同144題解法2  模板寫法
+def inorderTraversal2(root: TreeNode) -> list[int]:
+    #結果集
+    result = []
+    #輔助的stack及節點p
+    stack = []
+    p = root
+    while stack or p:
+        #若還有p代表還可能有左子節點 遍歷直到沒有左子節點
+        if p:
+            stack.append(p)
+            p = p.left
+        else:
+            #進入else代表沒有左子節點 就繼續找右子節點 若沒有則向stack要上層的值
+            p = stack.pop()
+            result.append(p.val)
+            p = p.right
+    
+    return result
