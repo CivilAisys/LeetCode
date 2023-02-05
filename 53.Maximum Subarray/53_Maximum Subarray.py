@@ -1,4 +1,3 @@
-
 import math
 # 解法1   使用 kadane's algorithm  此為最大子數列問題
 def maxSubArray(nums: list[int]) -> int:
@@ -11,7 +10,7 @@ def maxSubArray(nums: list[int]) -> int:
         sum += nums[index]
         # 判斷當前最大
         max_Sum = max(max_Sum, sum)
-        # 若sum < 0 時  重製sum為0
+        # 若sum < 0 時  重置sum為0
         if sum < 0:
             sum = 0
 
