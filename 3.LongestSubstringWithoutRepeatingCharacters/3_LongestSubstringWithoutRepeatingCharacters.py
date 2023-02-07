@@ -1,10 +1,8 @@
 # 解法1
 def lengthOfLongestSubstring(s: str) -> int:
-    # 傳入空字串或是字串內只有空白的情形
+    # 傳入空字串的情形
     if len(s) == 0:
         return 0
-    elif len(s.strip()) == 0:
-        return 1
 
     # 存放每一個字元最後出現的索引
     dic = {}
