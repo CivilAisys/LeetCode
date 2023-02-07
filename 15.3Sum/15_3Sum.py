@@ -10,9 +10,9 @@ def threeSum(nums: list[int]) -> list[list[int]]:
     numsLength = len(nums)
 
     for index in range(numsLength):
-        # index < numsLength -2 的情況下才會進行比對
+        # index < numsLength -2 的情況下才會進行比對(才滿足3個數)
         if index < numsLength - 2:
-            # 若是 index > 0 且 nums[index] == nums[index - 1]直接跳過此次迴圈
+            # 若是 index > 0 且 nums[index] == nums[index - 1]直接跳過此次迴圈 避免重複結果出現
             if index > 0 and nums[index] == nums[index - 1]:
                 continue
 
@@ -42,5 +42,6 @@ def threeSum(nums: list[int]) -> list[list[int]]:
                 elif sum < 0:
                     left += 1
     return result
+
 
 print(threeSum([0, 0, 0]))
