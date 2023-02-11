@@ -1,8 +1,5 @@
 
 #解法1 
-#對每個結點開一個字母集大小的陣列，
-#對應的下標是兒子所表示的字母，內容則是這個兒子對應在大數位上的位置，即標號
-
 class Trie:
 
     def __init__(self):
@@ -13,6 +10,7 @@ class Trie:
         for w in word:
             t = t.setdefault(w,{})
         t['$'] = None
+    # search 和 startsWith  只差在判斷'$' 若'$' 代表以遍歷完該路程到表完全符合
     def search(self, word: str) -> bool:
         t = self.trie
         for w in word:
