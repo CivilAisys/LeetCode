@@ -1,5 +1,5 @@
 import math
-# 題目要求BIG O 為 O(log n) 使用分治法
+# 題目要求BIG O 為 O(log n) 使用binary search
 def search(nums: list[int], target: int) -> int:
     # 左中右索引
     lowIndex, highIndex, midIndex = 0, len(nums) - 1, -1
