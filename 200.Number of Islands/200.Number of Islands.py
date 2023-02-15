@@ -27,20 +27,5 @@ def helper(grid: list[list[str]], visited: list[list[str]], x :int, y: int)->Non
     helper(grid, visited, x, y-1)
     helper(grid, visited, x, y+1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 test = Solution()
 test.numIslands([["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]])
