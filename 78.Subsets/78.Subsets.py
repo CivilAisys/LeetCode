@@ -4,9 +4,19 @@
 # 那麼現在所有的子集合為 []， [1]， [2]， [1， 2]，同理處理3的情況可得 [3]， [1， 3]， [2， 3]， [1， 2， 3]， 再加上之前的子集就是所有的子集合了
 class Solution:
     def subsets(self, nums: list[int]) -> list[list[int]]:
-        
+        # 結果集  初始為空集合
+        result = [[]]
+        # 將nums進行排序
+        nums.sort()
 
+        #進行迴圈計算子集
+        for num in nums:
+            # 先將result陣列裡的值再推入result內(需使用copy 因為result內的值為list)  在對原result值進行append
+            for i in range(len(result)):
+                result.append(result[i].copy())
+                result[i].append(num)
+        return result
+    
+test = Solution()
 
-
-
-        return None
+test.subsets([1,2,3])
