@@ -13,7 +13,7 @@ class Solution:
     # path為當前累積走的路徑 result為所有符合的結果集
 
     def helper_function(self, node: TreeNode, targetSum: int, path: list[int], result: list[list[int]]):
-        # 中止條件 1. node沒有值 2.sum(path) + node.val > targetSum
+        # 中止條件 1. node沒有值 
         if not node:
             return
         path.append(node.val)
