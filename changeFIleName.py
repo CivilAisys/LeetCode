@@ -13,9 +13,9 @@ folders = [item for item in all_items if os.path.isdir(
 # 列印出所有資料夾的名稱
 print("當前資料夾內的資料夾：")
 for folder in folders:
-    if folder.startswith("."):
+    if folder.startswith(".") or folder.startswith("0"):
         continue
     else:
-        os.rename(folder, folder[1:])
+        os.rename(folder, "0" + folder)
         
 
