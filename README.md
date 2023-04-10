@@ -1,3 +1,3 @@
 # LeetCode
 
-此為撰寫LeetCode的解法 使用語言為javascript及python
+紀錄撰寫leetcode的解法  
