@@ -15,17 +15,16 @@ def twoSum(nums: list[int], target: int) -> list[int]:
     return result
 
 # 解法2
+class Solution:
+    def twoSum1(self, nums: list[int], target: int) -> list[int]:
+        # 使用dic  key儲存nums[i]的值 value儲存index
+        map = {}
+        for index in range(len(nums)):
+            # target - 當前元素
+            minus = target - nums[index]
 
-
-def twoSum1(nums: list[int], target: int) -> list[int]:
-    # 使用dic  key儲存nums[i]的值 value儲存index
-    map = {}
-    for index in range(len(nums)):
-        # target - 當前元素
-        minus = target - nums[index]
-
-        # 相減完結果在map內即回傳
-        if minus in map:
-            return [map[minus], index]
-        else:
-            map[nums[index]] = index
+            # 相減完結果在map內即回傳
+            if minus in map:
+                return [map[minus], index]
+            else:
+                map[nums[index]] = index
