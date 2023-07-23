@@ -4,7 +4,7 @@ def searchInsert(nums: list[int], target: int) -> int:
     
     #找尋第一個大於target的索引  回傳索引 - 1
     while left <= right:
-        mid = (left + right) // 2
+        mid = left + (right - left + 1) // 2
 
         if nums[mid] > target:
             right = mid - 1
