@@ -10,5 +10,3 @@ class Solution:
             for j in range(1, n):
                 result[j] += result[j - 1]
         return result[n-1]
-
-uniquePaths(3, 7)
